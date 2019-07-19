@@ -15,12 +15,15 @@ export class UserService {
           .post(`${this.url}/add`, obj)
           .subscribe(res => console.log(res));
   }
- 
+ tempGet(){
+   let obj ={}
+  //  this.http.get('127.0.0.1:3000/view').subscribe(res=>alert(res))
+ }
   getData() {
       return(
       this
           .http
-          .get(`${this.url}`)
+          .get(`${this.url}/view`)
       );
   }
   upData(id, name) {
@@ -31,6 +34,7 @@ export class UserService {
           .subscribe(res => console.log(res));
   }
   delData(id) {
+    console.log("delete funtion")
       return this.http.get(`${this.url}/delete/${id}`).subscribe();
   }
   editData(id) {

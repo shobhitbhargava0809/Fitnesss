@@ -7,6 +7,7 @@ import { UsersService } from '../user.service';
   styleUrls: ['./join.component.css']
 })
 export class JoinComponent implements OnInit {
+  arr;
   name;
   email;
   password;
@@ -14,11 +15,23 @@ export class JoinComponent implements OnInit {
   height;
   constructor(private us: UsersService) { }
  
-  ngOnInit() {
+  ngOnInit() {  
+    this.getData();
   }
+  
+  getData() {
+    this.us.getData().subscribe(data => { this.arr = data; });
+}
+
   addData() {
     this.us.addData(this.name,this.email,this.password,this.weight,this.height);
     // console.log(this.name)
 }
+
+
+delData(id) {
+  this.us.delData(id);
+}
+
 
 }

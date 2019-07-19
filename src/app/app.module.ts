@@ -16,7 +16,11 @@ import { JoinComponent } from './join/join.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-
+import { ViewComponent } from './view/view.component';
+import { TableComponent } from './table/table.component';
+import { UpdateComponent } from './update/update.component';
+import { AdminComponent } from './admin/admin.component';
+import { MembershipComponent } from './membership/membership.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,12 @@ import { LoginComponent } from './login/login.component';
     GymsComponent,
     BindingComponent,
     JoinComponent,
-    LoginComponent
+    LoginComponent,
+    ViewComponent,
+    TableComponent,
+    UpdateComponent,
+    AdminComponent,
+    MembershipComponent
   ],
   imports: [
     BrowserModule,
