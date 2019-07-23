@@ -21,6 +21,7 @@ import { TableComponent } from './table/table.component';
 import { UpdateComponent } from './update/update.component';
 import { AdminComponent } from './admin/admin.component';
 import { MembershipComponent } from './membership/membership.component';
+import { ChoiceComponent } from './choice/choice.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { MembershipComponent } from './membership/membership.component';
     TableComponent,
     UpdateComponent,
     AdminComponent,
-    MembershipComponent
+    MembershipComponent,
+    ChoiceComponent
   ],
   imports: [
     BrowserModule,

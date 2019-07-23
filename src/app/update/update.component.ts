@@ -26,12 +26,15 @@ export class UpdateComponent implements OnInit {
 }
 
 
-up_data(id) {
-  this.us.up_data(this.name,this.email,this.password,this.weight,this.height,id);
+up_data(name,email,password,weight,height,id) {
+  this.us.up_data(name,email,password,weight,height,id);
  
 
 }
 
+delData(id) {
+  this.us.delData(id);
+}
 
 }
 

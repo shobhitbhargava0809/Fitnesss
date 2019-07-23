@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UpdateComponent } from 'Fitnesss/src/app/update/update.component';
  
 @Injectable({
   providedIn: 'root'
@@ -48,7 +49,7 @@ export class UsersService {
  
       const obj = {
           name: name,
-          email:email,
+          email:email,  
           password: password,
           weight: weight,
           height:height
@@ -58,5 +59,6 @@ export class UsersService {
         .http
         .post(`${this.url}/update/${id}`, obj)
         .subscribe(res => console.log('Done'));
-    }
+      }
+    
 }

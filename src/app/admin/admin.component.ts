@@ -10,6 +10,11 @@ export class AdminComponent implements OnInit {
 
   arr;
   // name;
+  name;
+  email;
+  password;
+  weight;
+  height;
   constructor(private us: UsersService) { }
   
  
@@ -26,5 +31,10 @@ delData(id) {
 
 
 
+up_data(id) {
+  this.us.up_data(this.name,this.email,this.password,this.weight,this.height,id);
+ 
+
+}
 
 }
